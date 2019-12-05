@@ -1,7 +1,7 @@
 <# Part 1
 $UniquePWCount = 0
 
-ForEach ($Item in 156218..652527) { # Change the numbers to your own input
+ForEach ($Item in 156218..652527) { # Replace with your puzzle input
     $CharArray = ([string]$Item).ToCharArray()
     $i = 0
     $testcount = 0
@@ -15,6 +15,7 @@ ForEach ($Item in 156218..652527) { # Change the numbers to your own input
 
     if ($testcount -eq 5) {
         $i = 0
+
         while ($i -lt 6) {
             if ($CharArray[$i] -eq $CharArray[($i+1)]) {
                 if ($lastsuccess -ne [int](-join $CharArray)) {
@@ -32,8 +33,9 @@ $UniquePWCount
 
 # Part 2
 $PWList = New-Object System.Collections.ArrayList
+$UniquePWCount = 0
 
-ForEach ($Item in 156218..652527) {
+ForEach ($Item in 156218..652527) { # Replace with your puzzle input
     $CharArray = ([string]$Item).ToCharArray()
     $i = 0
     $testcount = 0
@@ -47,6 +49,7 @@ ForEach ($Item in 156218..652527) {
 
     if ($testcount -eq 5) {
         $i = 0
+
         while ($i -lt 6) {
             if ($CharArray[$i] -eq $CharArray[($i+1)]) {
                 if ($lastsuccess -ne [int](-join $CharArray)) {
@@ -58,8 +61,6 @@ ForEach ($Item in 156218..652527) {
         }
     }
 }
-
-$UniquePWCount = 0
 
 ForEach ($Item in $PWList) {
     $CharArray = ([string]$Item).ToCharArray()

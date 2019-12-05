@@ -1,9 +1,7 @@
 <# Part 1
-#$inputfile = 100756
-$inputfile = Get-Content 'AoC-Day1-Input.txt'
-$totalfuel = 0
+$puzzleinput = Get-Content 'AoC-Day1-Input.txt'
 
-ForEach ($Item in $inputfile) {
+ForEach ($Item in $puzzleinput) {
     $totalfuel = $totalfuel + ([math]::floor($Item/3)-2)
 }
 
@@ -11,11 +9,9 @@ $totalfuel
 #>
 
 # Part 2
-#$inputfile = 100756
-$inputfile = Get-Content 'AoC-Day1-Input.txt'
-$totalfuel = 0
+$puzzleinput = Get-Content 'AoC-Day1-Input.txt'
 
-ForEach ($Item in $inputfile) {
+ForEach ($Item in $puzzleinput) {
     $modulefuel = ([math]::floor($Item/3)-2)
     $moduletotal = $modulefuel
 
